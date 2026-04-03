@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Навчальний проєкт з фізики (10 клас): Фізика крізь призму слова</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Georgia&display=swap');
+        
+        body { 
+            font-family: 'Inter', sans-serif; 
+            scroll-behavior: smooth; 
+            hyphens: auto; 
+            -webkit-hyphens: auto;
+        }
+
+        /* Повна заборона курсиву */
+        * {
+            font-style: normal !important;
+        }
+
+        .justify-p { 
+            text-align: justify; 
+            text-justify: inter-word;
+        }
+
+        .physics-bg { 
+            background-color: #f4f1ea; 
+            background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+        }
+
+        .physics-for-humanities {
+            font-family: 'Georgia', serif;
+            line-height: 1.7;
+            color: #444;
+            margin: 30px 0;
+            padding: 40px;
+            background-color: #fffaf0; 
+            border-radius: 15px;
+            border: 1px dashed #8d6e63;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .physics-for-humanities h2 {
+            color: #5d4037;
+            text-align: center;
+            font-variant: small-caps;
+            border-bottom: 1px solid #d7ccc8;
+            padding-bottom: 15px;
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        .humanities-category {
+            margin-bottom: 35px;
+        }
+
+        .humanities-category h3 {
+            color: #795548;
+            border-left: 4px solid #a1887f;
+            padding-left: 15px;
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+            font-weight: bold;
+        }
+
+        .project-list-phil {
+            list-style: none;
+            padding-left: 0;
+            display: grid;
+            gap: 15px;
+        }
+
+        .project-list-phil li {
+            padding: 20px;
+            background: #fff;
+            border: 1px solid #efebe9;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .project-list-phil li:hover {
+            box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+            border-color: #8d6e63;
+            transform: translateY(-2px);
+        }
+
+        .phil-badge {
+            font-size: 0.75rem;
+            color: #8d6e63;
+            background: #f4f5f1;
+            padding: 3px 10px;
+            border-radius: 12px;
+            float: right;
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-left: 15px;
+            margin-bottom: 5px;
+            border: 1px solid #e0e0d1;
+        }
+
+        .project-topic-title {
+            color: #3e2723;
+            display: inline-block;
+            margin-bottom: 5px;
+            font-size: 1.15rem;
+            font-weight: bold;
+        }
+
+        .project-description {
+            display: block;
+            color: #555;
+            text-align: justify;
+        }
+
+        .step-card {
+            background: white;
+            padding: 1.25rem;
+            border-radius: 1rem;
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+
+        .step-card:hover { transform: translateY(-5px); box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
+        
+        .user-choice-note {
+            background: #fdf2f2;
+            border: 1px solid #fecaca;
+            color: #991b1b;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body class="physics-bg text-slate-800">
+
+    <header class="bg-stone-800 text-stone-100 py-16 px-4 shadow-2xl text-center border-b-4 border-amber-900">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-3xl md:text-5xl font-serif font-bold mb-4">Навчальний проєкт з фізики 📜</h1>
+            <p class="text-stone-300 text-xl font-serif uppercase tracking-widest">10 клас: Гуманітарний профіль</p>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 py-12">
+        
+        <!-- Етапи роботи -->
+        <section class="mb-16 bg-white p-10 rounded-2xl shadow-md border border-stone-200">
+            <h2 class="text-2xl font-serif font-bold mb-8 flex items-center gap-3 text-stone-800">
+                <i class="fas fa-list-check"></i> Алгоритм виконання роботи
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="step-card">
+                    <strong class="block text-stone-800 mb-2">1. Організаційний етап</strong>
+                    <p class="text-sm text-stone-600">Вибір теми, обговорення мети та завдань, складання плану. План допомагає оцінити можливості.</p>
+                </div>
+                <div class="step-card">
+                    <strong class="block text-stone-800 mb-2">2. Підготовчий етап</strong>
+                    <p class="text-sm text-stone-600">Пошук інформації, формування портфоліо. Обов'язково зберігайте посилання на джерела.</p>
+                </div>
+                <div class="step-card">
+                    <strong class="block text-stone-800 mb-2">3. Проєктний етап</strong>
+                    <p class="text-sm text-stone-600">Опрацювання даних, створення моделей, формулювання висновків. Консультації з учителем.</p>
+                </div>
+                <div class="step-card">
+                    <strong class="block text-stone-800 mb-2">4. Оформлювальний етап</strong>
+                    <p class="text-sm text-stone-600">Створення презентації та доповіді. Вибирайте найголовніше, пишіть коротко та чітко.</p>
+                </div>
+                <div class="step-card">
+                    <strong class="block text-stone-800 mb-2">5. Презентаційний етап</strong>
+                    <p class="text-sm text-stone-600">Демонстрація результатів, захист ідеї та отриманих відповідей перед аудиторією.</p>
+                </div>
+                <div class="step-card">
+                    <strong class="block text-stone-800 mb-2">6. Підсумковий етап</strong>
+                    <p class="text-sm text-stone-600">Аналіз виконання завдань та визначення практичної користі проєкту для себе та інших.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ТЕМИ ПРОЄКТІВ -->
+        <section class="physics-for-humanities">
+            <h2>Рекомендовані теми проєктів</h2>
+
+            <div class="user-choice-note">
+                <p class="mb-2"><i class="fas fa-lightbulb mr-2"></i> Ви можете обрати одну із запропонованих тем або запропонувати власну, узгодивши її з учителем.</p>
+                <p><i class="fas fa-users mr-2"></i> Над одним проєктом може працювати група учнів (до 3-х осіб включно).</p>
+            </div>
+
+            <div class="humanities-category">
+                <h3>📚 Молекулярна фізика та мова</h3>
+                <ul class="project-list-phil">
+                    <li>
+                        <span class="phil-badge">Етимологія</span>
+                        <strong class="project-topic-title">«Слова, народжені фізикою»</strong>
+                        <span class="project-description">Дослідження походження термінів (атом, енергія, ентропія) та їх перетворення на метафори в художній літературі.</span>
+                    </li>
+                    <li>
+                        <span class="phil-badge">Літературознавство</span>
+                        <strong class="project-topic-title">«Фізика в науковій фантастиці»</strong>
+                        <span class="project-description">Аналіз описів фізичних явищ у творах Жюля Верна чи Герберта Веллса: де наука, а де художня вигадка?</span>
+                    </li>
+                    <li>
+                        <span class="phil-badge">Психологія</span>
+                        <strong class="project-topic-title">«Броунівський рух у соціумі»</strong>
+                        <span class="project-description">Чи можна застосувати закони хаотичного руху частинок для опису натовпу або поширення чуток?</span>
+                    </li>
+                    <li>
+                        <span class="phil-badge">Мистецтво</span>
+                        <strong class="project-topic-title">«Фізика фарб та ароматів»</strong>
+                        <span class="project-description">Процеси дифузії в живописі та парфумерії. Як фізика допомагає створювати шедеври.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="humanities-category">
+                <h3>📜 Термодинаміка: енергія та прогрес</h3>
+                <ul class="project-list-phil">
+                    <li>
+                        <span class="phil-badge">Історія</span>
+                        <strong class="project-topic-title">«Парова машина, що змінила світ»</strong>
+                        <span class="project-description">Як промислова революція змінила соціальну структуру суспільства та побут людини.</span>
+                    </li>
+                    <li>
+                        <span class="phil-badge">Медіа</span>
+                        <strong class="project-topic-title">«Реклама та фізика»</strong>
+                        <span class="project-description">Аналіз рекламних обіцянок товарів (термоодяг, енергетики). Пошук фізичних помилок у текстах.</span>
+                    </li>
+                    <li>
+                        <span class="phil-badge">Екологія</span>
+                        <strong class="project-topic-title">«Енергетична криза та мораль»</strong>
+                        <span class="project-description">Етичні аспекти використання викопного палива та перехід до відновлюваної енергії.</span>
+                    </li>
+                    <li>
+                        <span class="phil-badge">Філософія</span>
+                        <strong class="project-topic-title">«Ентропія як філософська категорія»</strong>
+                        <span class="project-description">Поняття впорядкованості та хаосу в природі, мистецтві та людському житті.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="humanities-category">
+                <h3>⚡ Електричне поле: культура та технології</h3>
+                <ul class="project-list-phil">
+                    <li>
+                        <span class="phil-badge">Культурологія</span>
+                        <strong class="project-topic-title">«Від гніву богів до сили струму»</strong>
+                        <span class="project-description">Як змінювався образ блискавки в міфології та мистецтві з розвитком наукових знань.</span>
+                    </li>
+                    <li>
+                        <span class="phil-badge">Дизайн</span>
+                        <strong class="project-topic-title">«Естетика світла в архітектурі»</strong>
+                        <span class="project-description">Використання електричного освітлення для створення простору та настрою в сучасних містах.</span>
+                    </li>
+                    <li>
+                        <span class="phil-badge">Кінематограф</span>
+                        <strong class="project-topic-title">«Електрика в кіно: міфи та реальність»</strong>
+                        <span class="project-description">Розбір сцен із супергероями, що керують електрикою, з точки зору реальних законів електростатики.</span>
+                    </li>
+                    <li>
+                        <span class="phil-badge">Біографія</span>
+                        <strong class="project-topic-title">«Нікола Тесла: людина, що приборкала поле»</strong>
+                        <span class="project-description">Аналіз постаті вченого як культурного феномена: де закінчується біографія і починається легенда?</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- КРИТЕРІЇ ОЦІНЮВАННЯ -->
+        <section class="mb-16">
+            <h2 class="text-2xl font-serif font-bold mb-6 text-stone-800">Критерії оцінювання проєкту</h2>
+            <div class="overflow-x-auto bg-white rounded-xl shadow-md border border-stone-200">
+                <table class="w-full text-left border-collapse font-serif">
+                    <thead class="bg-stone-100 border-b border-stone-200">
+                        <tr>
+                            <th class="p-5 font-bold text-stone-700">Показник</th>
+                            <th class="p-5 font-bold text-stone-700 text-center">Бали</th>
+                            <th class="p-5 font-bold text-stone-700">Опис</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-stone-100">
+                        <tr>
+                            <td class="p-5 font-semibold">Науковість</td>
+                            <td class="p-5 text-center font-bold text-amber-800">3</td>
+                            <td class="p-5 text-stone-600">Правильність використання фізичних понять та термінів.</td>
+                        </tr>
+                        <tr>
+                            <td class="p-5 font-semibold">Творчий підхід</td>
+                            <td class="p-5 text-center font-bold text-amber-800">3</td>
+                            <td class="p-5 text-stone-600">Оригінальність подачі матеріалу та глибина дослідження.</td>
+                        </tr>
+                        <tr>
+                            <td class="p-5 font-semibold">Оформлення</td>
+                            <td class="p-5 text-center font-bold text-amber-800">3</td>
+                            <td class="p-5 text-stone-600">Якість візуальних матеріалів та логічність структури.</td>
+                        </tr>
+                        <tr>
+                            <td class="p-5 font-semibold">Захист</td>
+                            <td class="p-5 text-center font-bold text-amber-800">3</td>
+                            <td class="p-5 text-stone-600">Вміння аргументувати думку та відповідати на запитання.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- ПРАВИЛА ПРЕЗЕНТАЦІЇ -->
+        <section class="mb-16 bg-stone-800 text-stone-100 p-10 rounded-2xl shadow-xl">
+            <h2 class="text-2xl font-serif font-bold mb-8 text-amber-400 text-center uppercase tracking-wider">Загальні правила презентації</h2>
+            <div class="grid md:grid-cols-2 gap-8 text-sm font-serif">
+                <div class="space-y-4">
+                    <p class="flex items-center gap-3"><i class="fas fa-smile text-amber-500"></i> Доповідайте з гарним настроєм. Слідкуйте за поставою.</p>
+                    <p class="flex items-center gap-3"><i class="fas fa-eye text-amber-500"></i> Під час доповіді обов'язково дивіться на аудиторію.</p>
+                    <p class="flex items-center gap-3"><i class="fas fa-volume-up text-amber-500"></i> Слова вимовляйте голосно та чітко.</p>
+                </div>
+                <div class="space-y-4">
+                    <p class="flex items-center gap-3"><i class="fas fa-file-alt text-amber-500"></i> Не читайте з аркуша, лише звіряйтеся з нотатками.</p>
+                    <p class="flex items-center gap-3"><i class="fas fa-clock text-amber-500"></i> Стежте за регламентом виступу.</p>
+                    <p class="flex items-center gap-3"><i class="fas fa-question-circle text-amber-500"></i> Дякуйте за запитання та увагу.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-stone-900 text-stone-500 py-10 text-center border-t border-stone-800">
+        <p class="font-serif uppercase tracking-widest text-xs">Онлайн-кабінет 229</p>
+    </footer>
+
+</body>
+</html>
