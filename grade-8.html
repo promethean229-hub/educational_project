@@ -17,7 +17,6 @@
         .step-card:hover { transform: translateY(-5px); transition: all 0.3s ease; }
         .physics-bg { background-color: #f8fafc; background-image: radial-gradient(#e2e8f0 1px, transparent 1px); background-size: 20px 20px; }
         
-        /* Покращене вирівнювання тексту з переносом слів */
         .justify-p { 
             text-align: justify; 
             text-justify: inter-word;
@@ -36,6 +35,36 @@
         .project-list li:hover {
             transform: translateX(8px);
             border-color: #3498db;
+        }
+
+        /* Стилі для нового блоку форм представлення */
+        .presentation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+        .presentation-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 160px;
+        }
+        .presentation-card:hover {
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+            border-color: #3b82f6;
+        }
+        .presentation-icon {
+            font-size: 2.5rem;
+            color: #64748b;
+            margin-bottom: 1rem;
         }
     </style>
 </head>
@@ -124,6 +153,47 @@
                     <span class="text-sm font-bold text-red-500 uppercase tracking-widest">Етап 6</span>
                     <h3 class="text-xl font-bold mt-1 mb-2">Підсумковий</h3>
                     <p class="text-slate-600 justify-p">Аналізуємо виконання завдань: чи досягнуто мети? Яку користь приніс проєкт для тебе та оточуючих?</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- НОВИЙ БЛОК: Форми представлення проєкту -->
+        <section class="mb-16">
+            <h2 class="text-2xl font-bold mb-8 text-blue-700 flex items-center gap-3">
+                <i class="fas fa-shapes"></i> Форми представлення проєкту
+            </h2>
+            <div class="presentation-grid">
+                <div class="presentation-card">
+                    <i class="fas fa-desktop presentation-icon"></i>
+                    <h4 class="font-bold">Мультимедійна презентація</h4>
+                </div>
+                <div class="presentation-card">
+                    <i class="fas fa-scroll presentation-icon"></i>
+                    <h4 class="font-bold">Стінгазета або плакат</h4>
+                </div>
+                <div class="presentation-card">
+                    <i class="fas fa-book-open presentation-icon"></i>
+                    <h4 class="font-bold">Буклет або пам'ятка</h4>
+                </div>
+                <div class="presentation-card">
+                    <i class="fas fa-vial presentation-icon"></i>
+                    <h4 class="font-bold">Діюча модель чи прилад</h4>
+                </div>
+                <div class="presentation-card">
+                    <i class="fas fa-video presentation-icon"></i>
+                    <h4 class="font-bold">Відеоролик або подкаст</h4>
+                </div>
+                <div class="presentation-card">
+                    <i class="fas fa-globe presentation-icon"></i>
+                    <h4 class="font-bold">Веб-сторінка чи блог</h4>
+                </div>
+                <div class="presentation-card">
+                    <i class="fas fa-theater-masks presentation-icon"></i>
+                    <h4 class="font-bold">Сценарій або вистава</h4>
+                </div>
+                <div class="presentation-card">
+                    <i class="fas fa-lightbulb presentation-icon"></i>
+                    <h4 class="font-bold">Власна творча ідея</h4>
                 </div>
             </div>
         </section>
