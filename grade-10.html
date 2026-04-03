@@ -21,11 +21,6 @@
             font-style: normal !important;
         }
 
-        .justify-p { 
-            text-align: justify; 
-            text-justify: inter-word;
-        }
-
         .physics-bg { 
             background-color: #f4f1ea; 
             background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
@@ -141,6 +136,14 @@
             font-weight: 600;
             line-height: 1.5;
         }
+
+        .comparison-card {
+            border-radius: 12px;
+            padding: 20px;
+            height: 100%;
+        }
+        .ref-bg { background-color: #fff5f5; border: 1px solid #feb2b2; }
+        .proj-bg { background-color: #f0fff4; border: 1px solid #9ae6b4; }
     </style>
 </head>
 <body class="physics-bg text-slate-800">
@@ -154,37 +157,65 @@
 
     <main class="max-w-5xl mx-auto px-4 py-12">
         
-        <!-- Етапи роботи -->
+        <!-- Етапи роботи (Перенесено вгору) -->
         <section class="mb-16 bg-white p-10 rounded-2xl shadow-md border border-stone-200">
             <h2 class="text-2xl font-serif font-bold mb-8 flex items-center gap-3 text-stone-800">
-                <i class="fas fa-list-check"></i> Алгоритм виконання роботи
+                <i class="fas fa-list-check text-amber-700"></i> Алгоритм виконання роботи
             </h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="step-card">
                     <strong class="block text-stone-800 mb-2">1. Організаційний етап</strong>
-                    <p class="text-sm text-stone-600">Вибір теми, обговорення мети та завдань, складання плану. План допомагає оцінити можливості.</p>
+                    <p class="text-sm text-stone-600">Вибір теми, обговорення мети. Складання плану — документа з порядком дій для досягнення мети.</p>
                 </div>
                 <div class="step-card">
                     <strong class="block text-stone-800 mb-2">2. Підготовчий етап</strong>
-                    <p class="text-sm text-stone-600">Пошук інформації, формування портфоліо. Обов'язково зберігайте посилання на джерела.</p>
+                    <p class="text-sm text-stone-600">Пошук та сортування інформації у портфоліо. Зберігайте посилання на джерела (автор, назва)!</p>
                 </div>
                 <div class="step-card">
                     <strong class="block text-stone-800 mb-2">3. Проєктний етап</strong>
-                    <p class="text-sm text-stone-600">Опрацювання даних, створення моделей, формулювання висновків. Консультації з учителем.</p>
+                    <p class="text-sm text-stone-600">Опрацювання даних, створення моделей, висновки. Звертайтеся до вчителя за уточненнями.</p>
                 </div>
                 <div class="step-card">
                     <strong class="block text-stone-800 mb-2">4. Оформлювальний етап</strong>
-                    <p class="text-sm text-stone-600">Створення презентації та доповіді. Вибирайте найголовніше, пишіть коротко та чітко.</p>
+                    <p class="text-sm text-stone-600">Створення презентації. Вибирайте найголовніше, викладайте думки коротко та чітко.</p>
                 </div>
                 <div class="step-card">
                     <strong class="block text-stone-800 mb-2">5. Презентаційний етап</strong>
-                    <p class="text-sm text-stone-600">Демонстрація результатів, захист ідеї та отриманих відповідей перед аудиторією.</p>
+                    <p class="text-sm text-stone-600">Захист ідеї. Представтеся, повідомте тему, дивіться на аудиторію, відповідайте на питання.</p>
                 </div>
                 <div class="step-card">
                     <strong class="block text-stone-800 mb-2">6. Підсумковий етап</strong>
-                    <p class="text-sm text-stone-600">Аналіз виконання завдань та визначення практичної користі проєкту для себе та інших.</p>
+                    <p class="text-sm text-stone-600">Аналіз виконання завдань: яку реальну користь приніс проєкт вам або оточуючим.</p>
                 </div>
             </div>
+        </section>
+
+        <!-- ВАЖЛИВЕ ЗАУВАЖЕННЯ: ПРОЄКТ VS РЕФЕРАТ (Тепер нижче алгоритму) -->
+        <section class="mb-16 bg-white p-8 rounded-2xl shadow-lg border border-amber-200">
+            <h2 class="text-2xl font-serif font-bold mb-6 flex items-center gap-3 text-red-800">
+                <i class="fas fa-exclamation-triangle"></i> Запам'ятай: Проєкт — це НЕ реферат!
+            </h2>
+            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                <div class="comparison-card ref-bg">
+                    <h3 class="text-red-700 font-bold mb-4 uppercase text-sm tracking-wider">Реферат — це:</h3>
+                    <ul class="space-y-3 text-sm text-red-900">
+                        <li class="flex items-start gap-2"><i class="fas fa-times-circle mt-1"></i> Просте переказування чужих думок.</li>
+                        <li class="flex items-start gap-2"><i class="fas fa-times-circle mt-1"></i> Збір інформації з інтернету без змін.</li>
+                        <li class="flex items-start gap-2"><i class="fas fa-times-circle mt-1"></i> Пасивна робота («прочитав і записав»).</li>
+                        <li class="flex items-start gap-2"><i class="fas fa-times-circle mt-1"></i> Результат: стопка паперу з текстом.</li>
+                    </ul>
+                </div>
+                <div class="comparison-card proj-bg">
+                    <h3 class="text-green-700 font-bold mb-4 uppercase text-sm tracking-wider">Проєкт — це:</h3>
+                    <ul class="space-y-3 text-sm text-green-900">
+                        <li class="flex items-start gap-2"><i class="fas fa-check-circle mt-1 text-green-600"></i> Твоє власне дослідження або виріб.</li>
+                        <li class="flex items-start gap-2"><i class="fas fa-check-circle mt-1 text-green-600"></i> Спроба пояснити явище через досвід чи модель.</li>
+                        <li class="flex items-start gap-2"><i class="fas fa-check-circle mt-1 text-green-600"></i> Активна дія («придумав, зробив, перевірив»).</li>
+                        <li class="flex items-start gap-2"><i class="fas fa-check-circle mt-1 text-green-600"></i> Результат: знання, здобуті на практиці!</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="text-center font-bold text-stone-700 italic border-t pt-4">«Реферат розповідає, що зробили інші. Проєкт показує, що зробив ТИ!»</p>
         </section>
 
         <!-- ТЕМИ ПРОЄКТІВ -->
@@ -192,8 +223,8 @@
             <h2>Рекомендовані теми проєктів</h2>
 
             <div class="user-choice-note">
-                <p class="mb-2"><i class="fas fa-lightbulb mr-2"></i> Ви можете обрати одну із запропонованих тем або запропонувати власну, узгодивши її з учителем.</p>
-                <p><i class="fas fa-users mr-2"></i> Над одним проєктом може працювати група учнів (до 3-х осіб включно).</p>
+                <p class="mb-2"><i class="fas fa-lightbulb mr-2 text-amber-600"></i> Ви можете обрати одну із запропонованих тем або запропонувати власну, узгодивши її з учителем.</p>
+                <p><i class="fas fa-users mr-2 text-blue-600"></i> Над одним проєктом може працювати група учнів (до 3-х осіб включно).</p>
             </div>
 
             <div class="humanities-category">
@@ -275,6 +306,37 @@
             </div>
         </section>
 
+        <!-- ОРІЄНТОВНИЙ ПЛАН ПРЕЗЕНТАЦІЇ -->
+        <section class="mb-16">
+            <h2 class="text-2xl font-serif font-bold mb-6 text-stone-800">Орієнтовний план презентації</h2>
+            <div class="bg-white rounded-xl shadow-md border border-stone-200 p-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="p-4 border-b md:border-b-0 md:border-r border-stone-100">
+                        <h4 class="font-bold text-amber-900 mb-2">Зміст слайда</h4>
+                        <ul class="text-sm space-y-2 text-stone-600">
+                            <li>• Тема проєкту, виконавці</li>
+                            <li>• Ключове питання (мета)</li>
+                            <li>• Матеріали проєкту (дослідження)</li>
+                            <li>• Висновки</li>
+                            <li>• Список джерел</li>
+                            <li>• Подяка</li>
+                        </ul>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-amber-900 mb-2">Зміст доповіді</h4>
+                        <ul class="text-sm space-y-2 text-stone-600">
+                            <li>• Представлення виконавців та теми</li>
+                            <li>• Озвучення мети та проблеми</li>
+                            <li>• Розповідь про хід роботи</li>
+                            <li>• Оголошення результатів</li>
+                            <li>• Презентація використаних джерел</li>
+                            <li>• Подяка присутнім за увагу</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- КРИТЕРІЇ ОЦІНЮВАННЯ -->
         <section class="mb-16">
             <h2 class="text-2xl font-serif font-bold mb-6 text-stone-800">Критерії оцінювання проєкту</h2>
@@ -324,8 +386,8 @@
                 </div>
                 <div class="space-y-4">
                     <p class="flex items-center gap-3"><i class="fas fa-file-alt text-amber-500"></i> Не читайте з аркуша, лише звіряйтеся з нотатками.</p>
-                    <p class="flex items-center gap-3"><i class="fas fa-clock text-amber-500"></i> Стежте за регламентом виступу.</p>
-                    <p class="flex items-center gap-3"><i class="fas fa-question-circle text-amber-500"></i> Дякуйте за запитання та увагу.</p>
+                    <p class="flex items-center gap-3"><i class="fas fa-clock text-amber-500"></i> Стежте за регламентом (часом) виступу.</p>
+                    <p class="flex items-center gap-3"><i class="fas fa-question-circle text-amber-500"></i> Починайте відповідь на питання з подяки.</p>
                 </div>
             </div>
         </section>
@@ -333,7 +395,7 @@
     </main>
 
     <footer class="bg-stone-900 text-stone-500 py-10 text-center border-t border-stone-800">
-        <p class="font-serif uppercase tracking-widest text-xs">Онлайн-кабінет 229</p>
+        <p class="font-serif uppercase tracking-widest text-xs">Онлайн-кабінет 229 • Фізика 10</p>
     </footer>
 
 </body>
