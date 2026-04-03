@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Навчальні проєкти з фізики</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: radial-gradient(circle at top left, #1e293b, #0f172a);
+            min-height: 100vh;
+            color: #f1f5f9;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1.5rem;
+        }
+
+        .physics-btn {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .physics-btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px -5px rgba(56, 189, 248, 0.4);
+            border-color: #38bdf8;
+            background: rgba(56, 189, 248, 0.1);
+        }
+
+        .icon-bg {
+            background: linear-gradient(135deg, #38bdf8 0%, #3b82f6 100%);
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center p-6">
+
+    <div class="max-w-4xl w-full">
+        <!-- Header Section -->
+        <div class="text-center mb-12">
+            <div class="inline-block p-3 rounded-2xl icon-bg mb-4 shadow-lg shadow-blue-500/20">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.628.282a2 2 0 01-1.806 0l-.628-.282a6 6 0 00-3.86-.517l-2.387.477a2 2 0 00-1.022.547m0-3.142a2 2 0 011.022-.547l2.387-.477a6 6 0 013.86.517l.628.282a2 2 0 001.806 0l.628-.282a6 6 0 013.86-.517l2.387.477a2 2 0 011.022.547M4 14v-.5a7.5 7.5 0 0115 0v.5M8 11a4 4 0 118 0 4 4 0 01-8 0z" />
+                </svg>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 tracking-tight">Навчальні проєкти з фізики</h1>
+            <p class="text-slate-400 text-lg">Оберіть відповідний клас для перегляду матеріалів</p>
+        </div>
+
+        <!-- Buttons Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <!-- Клас 7 -->
+            <a href="grade-7.html" class="glass-card p-8 flex flex-col items-center text-center physics-btn group">
+                <span class="text-4xl mb-4">⚡</span>
+                <h3 class="text-xl font-semibold group-hover:text-sky-400">Фізика 7 клас</h3>
+            </a>
+
+            <!-- Клас 8 -->
+            <a href="grade-8.html" class="glass-card p-8 flex flex-col items-center text-center physics-btn group">
+                <span class="text-4xl mb-4">🔥</span>
+                <h3 class="text-xl font-semibold group-hover:text-sky-400">Фізика 8 клас</h3>
+            </a>
+
+            <!-- Клас 9 -->
+            <a href="grade-9.html" class="glass-card p-8 flex flex-col items-center text-center physics-btn group">
+                <span class="text-4xl mb-4">🧲</span>
+                <h3 class="text-xl font-semibold group-hover:text-sky-400">Фізика 9 клас</h3>
+            </a>
+
+            <!-- Клас 10 -->
+            <a href="grade-10.html" class="glass-card p-8 flex flex-col items-center text-center physics-btn group">
+                <span class="text-4xl mb-4">🌌</span>
+                <h3 class="text-xl font-semibold group-hover:text-sky-400">Фізика 10 клас</h3>
+            </a>
+
+            <!-- Клас 11 -->
+            <a href="grade-11.html" class="glass-card p-8 flex flex-col items-center text-center physics-btn group">
+                <span class="text-4xl mb-4">⚛️</span>
+                <h3 class="text-xl font-semibold group-hover:text-sky-400">Фізика 11 клас</h3>
+            </a>
+
+            <!-- Інфо -->
+            <div class="glass-card p-8 flex flex-col items-center justify-center text-center border-dashed border-2 opacity-60">
+                <p class="text-xs uppercase tracking-widest font-bold text-slate-400">Архів проєктів</p>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-16 text-center text-slate-500 text-sm">
+            <p>&copy;Онлайн-кабінет фізики-229</p>
+        </footer>
+    </div>
+
+</body>
+</html>
