@@ -79,6 +79,35 @@
         .project-list li strong {
             color: #2e86c1;
         }
+
+        /* Нові стилі для форм представлення проєкту */
+        .presentation-card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 160px;
+        }
+        .presentation-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        .presentation-icon {
+            font-size: 2.5rem;
+            color: #64748b; /* Slate-500 як на скрині */
+            margin-bottom: 16px;
+        }
+        .presentation-text {
+            font-weight: 700;
+            color: #1e293b;
+            line-height: 1.2;
+        }
     </style>
 </head>
 <body class="physics-bg text-slate-800">
@@ -166,6 +195,66 @@
                     <span class="text-sm font-bold text-red-500 uppercase tracking-widest">Етап 6</span>
                     <h3 class="text-xl font-bold mt-1 mb-2">Підсумковий</h3>
                     <p class="text-slate-600 justify-p">Аналізуємо виконання завдань: чи досягнуто мети? Яку користь приніс проєкт для тебе та оточуючих?</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- НОВА СЕКЦІЯ: ФОРМИ ПРЕДСТАВЛЕННЯ ПРОЄКТУ -->
+        <section class="mb-16">
+            <h2 class="text-2xl font-bold mb-8 flex items-center gap-3 text-slate-800">
+                <span class="bg-indigo-600 text-white p-2 rounded-lg flex items-center justify-center w-10 h-10">
+                    <i class="fas fa-shapes text-sm"></i>
+                </span>
+                Форми представлення проєкту
+            </h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <!-- Мультимедійна презентація -->
+                <div class="presentation-card">
+                    <i class="fas fa-desktop presentation-icon"></i>
+                    <p class="presentation-text">Мультимедійна презентація</p>
+                </div>
+                
+                <!-- Стінгазета або плакат -->
+                <div class="presentation-card">
+                    <i class="fas fa-scroll presentation-icon"></i>
+                    <p class="presentation-text">Стінгазета або плакат</p>
+                </div>
+                
+                <!-- Буклет або пам'ятка -->
+                <div class="presentation-card">
+                    <i class="fas fa-book-open presentation-icon"></i>
+                    <p class="presentation-text">Буклет або пам'ятка</p>
+                </div>
+                
+                <!-- Діюча модель чи прилад -->
+                <div class="presentation-card">
+                    <i class="fas fa-vial presentation-icon"></i>
+                    <p class="presentation-text">Діюча модель чи прилад</p>
+                </div>
+                
+                <!-- Відеоролик або подкаст -->
+                <div class="presentation-card">
+                    <i class="fas fa-video presentation-icon"></i>
+                    <p class="presentation-text">Відеоролик або подкаст</p>
+                </div>
+                
+                <!-- Веб-сторінка чи блог -->
+                <div class="presentation-card">
+                    <i class="fas fa-globe presentation-icon"></i>
+                    <p class="presentation-text">Веб-сторінка чи блог</p>
+                </div>
+                
+                <!-- Сценарій або вистава -->
+                <div class="presentation-card">
+                    <i class="fas fa-theater-masks presentation-icon"></i>
+                    <p class="presentation-text">Сценарій або вистава</p>
+                </div>
+                
+                <!-- Власна творча ідея -->
+                <div class="presentation-card">
+                    <i class="far fa-lightbulb presentation-icon"></i>
+                    <p class="presentation-text">Власна творча ідея</p>
                 </div>
             </div>
         </section>
